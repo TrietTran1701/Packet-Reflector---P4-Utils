@@ -55,10 +55,16 @@ control MyIngress(inout headers hdr,
                   inout metadata meta,
                   inout standard_metadata_t standard_metadata) {
 
-
+    action swap_mac(){
+       macAddr_t tmp;
+	   tmp = hdr.ethernet.srcAddr;
+	   hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
+	   hdr.ethernet.dstAddr = tmp;
+    }
 
     apply {
-
+       // Swap MAC addresses.
+       swap_mac();
 
        //Set Output port == Input port
 	   standard_metadata.egress_spec = standard_metadata.ingress_port;
