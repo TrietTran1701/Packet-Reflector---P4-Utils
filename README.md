@@ -80,7 +80,7 @@ In the ```reflector.p4``` skeleton, we should do the following:
 
 ### Testing the solution
 When we finished the 4 steps above we can repeat the steps explained in First Steps section. This time when we send a packet we should get a reflected packet from the switch with the MAC addresses swapped:
-![alt text](https://github.com/nsg-ethz/p4-learning/raw/master/exercises/01-Reflector/images/output_01.png)
+![alt text](https://drive.google.com/drive/u/0/folders/1a01MrTTUKCco6jRWGbv7gomuEYaxsCDe)
 
 ## Reference
 https://github.com/nsg-ethz/p4-learning/tree/master/exercises/01-Reflector
